@@ -3,10 +3,15 @@
 
 * run the following command to see the simulation:
    roslaunch rbx1_bringup fake_turtlebot.launch
+
    roslaunch rbx1_nav fake_move_base_blank_map.launch
+
    rosrun rviz rviz -d `rospack find rbx1_nav` /nav.rviz
+
    rosrun rbx1_nav final_project.py
+
    rosrun rbx1_nav clamArm_listener.py
+
    rosrun rbx1_nav talker.py
 
 
