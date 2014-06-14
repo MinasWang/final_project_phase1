@@ -2,7 +2,8 @@
 * to simulate the behavior of turtlebot of auto-navigation, please put the following three file in your 
 	catkin_ws/rharmony/rbx1/rbx1_nav/nodes/, 
 	
-  and make sure they have the access of read and wriet. run chmod a+x final_project.py talker.py clamArm_listener.py
+  and make sure they have the access of read and write. run command:
+       chmod a+x final_project.py talker.py clamArm_listener.py
 
 * run the following command to see the simulation:
    roslaunch rbx1_bringup fake_turtlebot.launch
