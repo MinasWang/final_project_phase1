@@ -30,7 +30,7 @@
    * visualized your auto-navigation in rviz <br /> 
      for simulation,please run : <br />
 	`rosrun rviz rviz -d 'rospack find rbx1_nav' /nav.rviz` <br />
-     for real turtlebot, please run: \<br />
+     for real turtlebot, please run: <br />
 	`rosrun rviz rviz -d 'rospack find rbx1_nav' /amcl.rviz`
    
    * run these command in your_laptop: <br />
