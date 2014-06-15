@@ -1,0 +1,39 @@
+* This is the description of building a map.
+@author: Wang Yuanhui (王远辉)
+@data  : 2014-06-14
+
+Using kinect without turtlebot:
+step 1: run a fake turtlebot. 
+	roslaunch rbx1_bringup fake_turtlrbot.launch
+step 2: connect to the laser
+	roslaunch rbx1_bringup fake_laser.launch
+step 3: using gmapping to catch an initial map from laser.
+	roslaunch rbx1_nav gmapping_demo.launch
+step 4: using rviz to visualize the process.
+	rosrun rviz rviz -d `rospack find rbx1_nav` /gmapping.rviz
+step 5: bring up the turtlebot controller.
+	roslaunch rbx1_nav keyboard_teleop.launch
+
+after you map all the environment you need.
+step 6: save the map
+	rosrun map_server map_saver -f test_map_name
+
+
+Mapping in the real robot is similar with the above.
+step 1: connect two computers.
+        change the ~/.bashrc file for the variables of ROS_HOSTNAME 
+	and ROS_MASTERURI.
+
+step 2: connect the turtle in the turtlebot's laptop
+	roslaunch rbx1_bringup turtlebot_minial_create.launch
+
+step 3: connect the laser in the turtlebot's laptop
+	roslaunch rbx1_bringup fake_laser.launch
+
+step 4: now you can run the rest command in your laptop as above.
+
+
+
+
+
+

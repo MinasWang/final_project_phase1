@@ -92,39 +92,41 @@ class mycallback():
        
 	# Update the marker display
         self.marker_pub.publish(self.markers)
-            
+        rospy.loginfo("abc")    
         # Intialize the waypoint goal
         goal = MoveBaseGoal()
-            
+        rospy.loginfo("abc 1 ")      
         # Use the map frame to define goal poses
         goal.target_pose.header.frame_id = 'map'
-            
+        rospy.loginfo("abc 2 ")      
         # Set the time stamp to "now"
         goal.target_pose.header.stamp = rospy.Time.now()
-            
+        rospy.loginfo("abc 3 ")      
         # Set the goal pose to the first waypoint
         goal.target_pose.pose = waypoints[0]
-            
+        rospy.loginfo("abc 4 ")      
 	# Start the robot moving toward the goal
         self.move(goal)
-            
+        rospy.loginfo("abc 5 ")      
 
    
    
     def move(self, goal):
             # Send the goal pose to the MoveBaseAction server
             self.move_base.send_goal(goal)
-            
+            rospy.loginfo("abc 6 ")  
             # Allow 1 minute to get there
             finished_within_time = self.move_base.wait_for_result(rospy.Duration(60)) 
             
             # If we don't get there in time, abort the goal
             if not finished_within_time:
                 self.move_base.cancel_goal()
+		rospy.loginfo("abc 7 ")  
                 rospy.loginfo("Timed out achieving goal")
             else:
                 # We made it!
                 state = self.move_base.get_state()
+		rospy.loginfo("abc 8 ")  	
                 if state == GoalStatus.SUCCEEDED:
                     rospy.loginfo("Goal succeeded!")
 		    # self.shutdown()
