@@ -6,7 +6,8 @@
    * clamArm_listener.py : in charge of subscribe to topic 'anotherchatter' of whether the turtle have arrived the goal position.
    * map_building.txt : a simple description of how to map the environment in both simulation and real robot.
 
-* Note:to simulate the behavior of turtlebot of auto-navigation, please put the following three file in your
+* Note: 
+   to simulate the behavior of turtlebot of auto-navigation, please put the following three file in your
        `catkin_ws/rharmony/rbx1/rbx1_nav/nodes/`, 
    and make sure they have the access of read and write. run command:
        `chmod a+x final_project.py talker.py clamArm_listener.py`
@@ -15,7 +16,7 @@
    * first thing we need to do is connect two laptop, call turtlebot_laptop and your_laptop.  
    * we need to bring up a turtlebot, if you are in simulation, please run in your_laptop:
      `roslaunch rbx1_bringup fake_turtlebot.launch`
-    if you are using real robot, pleast run in turtlebot_laptop:
+     if you are using real robot, pleast run in turtlebot_laptop:
      `roslaunch rbx1_bringup turtlebot_minimal_create.launch`
   
    * connect to the Kinnect in your_laptop or turtlebot_laptop:
