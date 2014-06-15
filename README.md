@@ -6,10 +6,10 @@
    * clamArm_listener.py : in charge of subscribe to topic 'anotherchatter' of whether the turtle have arrived the goal position.
    * map_building.txt : a simple description of how to map the environment in both simulation and real robot.
 
-* Note:to simulate the behavior of turtlebot of auto-navigation, please put the following three file in your 
-	`catkin_ws/rharmony/rbx1/rbx1_nav/nodes/`, 
-       and make sure they have the access of read and write. run command:
-	`chmod a+x final_project.py talker.py clamArm_listener.py`
+* Note:to simulate the behavior of turtlebot of auto-navigation, please put the following three file in your
+       `catkin_ws/rharmony/rbx1/rbx1_nav/nodes/`, 
+   and make sure they have the access of read and write. run command:
+       `chmod a+x final_project.py talker.py clamArm_listener.py`
 
 * Details: follow these step you can make your turtlebot listening a goal position command,and auto-navigate to the goal position.
    * first thing we need to do is connect two laptop, call turtlebot_laptop and your_laptop.  
