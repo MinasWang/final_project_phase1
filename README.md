@@ -15,17 +15,17 @@
 * Details: follow these step you can make your turtlebot listening a goal position command,and auto-navigate to the goal position.
    * first thing we need to do is connect two laptop, call turtlebot_laptop and your_laptop.  
    * we need to bring up a turtlebot, if you are in simulation, please run in your_laptop:
-     `roslaunch rbx1_bringup fake_turtlebot.launch`
+		`roslaunch rbx1_bringup fake_turtlebot.launch`
      if you are using real robot, pleast run in turtlebot_laptop:
-     `roslaunch rbx1_bringup turtlebot_minimal_create.launch`
+		`roslaunch rbx1_bringup turtlebot_minimal_create.launch`
   
    * connect to the Kinnect in your_laptop or turtlebot_laptop:
-      `roslaunch rbx1_bringup fake_laser.launch`
+		`roslaunch rbx1_bringup fake_laser.launch`
 
    * bring up your map, if you are in simulation and you don't record any map before, please run:
-      `roslaunch rbx1_nav fake_move_base_blank_map.launch`
+		`roslaunch rbx1_nav fake_move_base_blank_map.launch`
      if you are runing a real turtlebot and you created a map called test_map_5.yaml, please run:
-       `roslaunch rbx1_nav fake_amcl.launch map:=test_map_5.yaml`
+		`roslaunch rbx1_nav fake_amcl.launch map:=test_map_5.yaml`
    
    * visualized your auto-navigation in rviz
      for simulation,please run : 
